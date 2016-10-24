@@ -16,6 +16,12 @@ public class Constants {
 	public static final int WWIDTH = 500;
 	public static final int HHEIGHT = 180;
 	
+	public static final long SSSERIAL = 61636578L;
+	public static final String SAVED = "Saved";
+	public static final String ERROR = "ERROR";
+	public static final int WWWIDTH = 120;
+	public static final int HHHEIGHT = 100;
+	
 	/* JLabel Labels */
 	public static final String EMAIL = "Email:";
 	public static final String TO = "To:";
@@ -40,6 +46,7 @@ public class Constants {
 	public static final String ACTION_NEWPROJECT = "newproject";
 	public static final String ACTION_SAVE = "save";
 	public static final String ACTION_DISCARD = "discard";
+	public static final String ACTION_SAVEWORK = "savework";
 	
 	public static final JLabel BLANK = new JLabel();
 }

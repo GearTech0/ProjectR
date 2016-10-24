@@ -78,6 +78,9 @@ public class Window extends JFrame implements ActionListener{
 		current_ta.setMargin(new Insets(5, 5, 5, 5));
 		
 		JTextField email_tf = new JTextField(Constants.NOTHING, 20);
+		
+		savework.setActionCommand(Constants.ACTION_SAVEWORK);
+		savework.addActionListener(this);
 		/* End init */
 		
 		/*Deal with Gaps*/
@@ -113,13 +116,18 @@ public class Window extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getActionCommand().equals(Constants.ACTION_NEWPROJECT)){
-			
+
 			/* Need this class to listen for the Save/Discard action from the newProject Window*/
 			@SuppressWarnings("unused")
 			NewProject newProject = new NewProject(this);
 		}
 		else if(e.getActionCommand().equals(Constants.ACTION_FINISH)){
 			dispose();
+		} else if(e.getActionCommand().equals(Constants.ACTION_SAVEWORK)){
+
+			/* the save window */
+			@SuppressWarnings("unused")
+			SaveWindow saveWindow = new SaveWindow(SaveWindow.trySave());
 		}
 	}
 }
