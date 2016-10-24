@@ -23,6 +23,11 @@ public class Window extends JFrame implements ActionListener{
 	/* Insert components here instead of setScreen function */
 	@SuppressWarnings("unused")
 	private JLabel email;
+	private JLabel current;
+	
+	private JButton newproject;
+	private JButton savework;
+	private JButton finish;
 	
 	public Window(){
 		super(Constants.NAME);
@@ -59,12 +64,12 @@ public class Window extends JFrame implements ActionListener{
 	private void setScreen(GroupLayout layout){
 		
 		/* Begin init */
-		JLabel email = new JLabel(Constants.EMAIL);
-		JLabel current = new JLabel(Constants.PROJECTS);
+		email = new JLabel(Constants.EMAIL);
+		current = new JLabel(Constants.PROJECTS);
 		
-		JButton newproject = new JButton(Constants.NEWPROJECT);
-		JButton savework = new JButton(Constants.SAVE);
-		JButton finish = new JButton(Constants.FINISH);
+		newproject = new JButton(Constants.NEWPROJECT);
+		savework = new JButton(Constants.SAVE);
+		finish = new JButton(Constants.FINISH);
 		
 		finish.setActionCommand(Constants.ACTION_FINISH);
 		finish.addActionListener(this);
@@ -123,7 +128,8 @@ public class Window extends JFrame implements ActionListener{
 		}
 		else if(e.getActionCommand().equals(Constants.ACTION_FINISH)){
 			dispose();
-		} else if(e.getActionCommand().equals(Constants.ACTION_SAVEWORK)){
+		} 
+		else if(e.getActionCommand().equals(Constants.ACTION_SAVEWORK)){
 
 			/* the save window */
 			@SuppressWarnings("unused")
